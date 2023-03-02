@@ -1,22 +1,20 @@
 
+//d3.csv('data1.csv').then(function(datapoints){
 
-     
-d3.csv('data1.csv').then(function(datapoints){
+//  const newss = datapoints.reduce((t,i)=>{
+//  return {...t,
+//    years:[...t.years,i.year] ,
+//    lifetime_gross:[...t.lifetime_gross,i.lifetime_grosss] ,
+//  }
 
-  const newss = datapoints.reduce((t,i)=>{
-  return {...t,
-    years:[...t.years,i.year] ,
-    lifetime_gross:[...t.lifetime_gross,i.lifetime_grosss] ,
-  }
-
-},{years:[],lifetime_gross:[]})
+//},{years:[],lifetime_gross:[]})
   
   
         var chart000 = {
           series: [{
           name: 'Transactions',
           type: 'area',
-          data: newss.lifetime_gross
+          data: [1,2]//newss.lifetime_gross
         }],
           chart: {
           height: 350,
@@ -44,7 +42,7 @@ d3.csv('data1.csv').then(function(datapoints){
             stops: [0, 100, 100, 100]
           }
         },
-        labels: newss.years,
+        labels: [3,4] ,//newss.years,
         markers: {
           size: 0
         },
@@ -75,4 +73,4 @@ d3.csv('data1.csv').then(function(datapoints){
         var chart = new ApexCharts(document.getElementById("chart000"), chart000);
         chart.render();
   
-})
+//})
