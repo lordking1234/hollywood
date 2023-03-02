@@ -74,3 +74,64 @@ d3.csv('data1.csv').then(function(datapoints){
         chart.render();
   
 })
+
+
+
+
+
+
+
+d3.csv('data2.csv').then(function(datapoints){
+
+  let selectedProps = data.reduce((acc, curr) => {
+    let { count:value,studio:name } = curr;
+    return [...acc, { value,name }];
+  }, []);
+  
+  
+        var chart00 = {
+ title: {
+    text: '',
+    subtext: '',
+    left: 'center'
+  },
+  tooltip: {
+    trigger: 'item'
+  },
+  legend: {
+    orient: 'vertical',
+    left: 'left'
+  },
+  series: [
+    {
+      name: '',
+      type: 'pie',      
+      label: {  show: true
+      },
+
+      color: [
+        '#fb7293',
+        '#ca6666',
+       '#d37f7f',
+       '#db9999',
+       '#e4b2b2',
+        '#FFDB5C',
+        '#ff9f7f',
+        '#fb7293'],
+      radius: ['50%','10'],
+      data: selectedProps,
+      emphasis: {
+        itemStyle: {
+          shadowBlur: 10,
+          shadowOffsetX: 0,
+          shadowColor: 'rgba(0, 0, 0, 0.5)'
+        }
+      }
+    }
+  ]
+      };
+
+        var chart = new ApexCharts(document.getElementById("chart00"), chart00);
+        chart.render();
+  
+})
