@@ -1,13 +1,13 @@
 
-//d3.csv('data1.csv').then(function(datapoints){
+d3.csv('data1.csv').then(function(datapoints){
 
-//  const newss = datapoints.reduce((t,i)=>{
-//  return {...t,
-//    years:[...t.years,i.year] ,
-//    lifetime_gross:[...t.lifetime_gross,i.lifetime_grosss] ,
-//  }
+  const newss = datapoints.reduce((t,i)=>{
+  return {...t,
+    years:[...t.years,i.year] ,
+    lifetime_gross:[...t.lifetime_gross,i.lifetime_grosss] ,
+  }
 
-//},{years:[],lifetime_gross:[]})
+},{years:[],lifetime_gross:[]})
   
   
         var chart000 = {
@@ -73,4 +73,4 @@
         var chart = new ApexCharts(document.getElementById("chart000"), chart000);
         chart.render();
   
-//})
+})
