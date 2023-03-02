@@ -42,7 +42,7 @@ d3.csv('data1.csv').then(function(datapoints){
             stops: [0, 100, 100, 100]
           }
         },
-        labels: [3,4] ,//newss.years,
+        labels: newss.years,
         markers: {
           size: 0
         },
