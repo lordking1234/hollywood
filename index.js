@@ -14,7 +14,7 @@ d3.csv('data1.csv').then(function(datapoints){
           series: [{
           name: 'Transactions',
           type: 'area',
-          data: [1,2]//newss.lifetime_gross
+          data: newss.lifetime_gross
         }],
           chart: {
           height: 350,
