@@ -10,6 +10,19 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .bb {
+    display: inline-block;
+    margin-bottom: 8px;
+    background-image: linear-gradient(270deg, #250fe9, #33e3f0);
+    font-family: Rubik, sans-serif;
+    color: transparent;
+    font-weight: 600;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
 .carousel-item {
   height: 65vh;
   min-height: 350px;
